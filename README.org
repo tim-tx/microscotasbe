@@ -1,10 +1,12 @@
-* TASBE-like characterization of the microscope
-** autofluorescence
-** bleedthrough
-** MEFLs calibration
-** optical bias
+* dependencies
+* features
+** TASBE-like characterization of the microscope
+*** autofluorescence
+*** bleedthrough
+*** MEFLs calibration
+*** optical bias
 
-* Cell segmentation
-** segmentation
-** declumping
-** cell-cell contact test
+** Cell segmentation
+*** segmentation
+*** declumping
+*** cell-cell contact test
