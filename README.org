@@ -5,7 +5,6 @@
 ** optical bias
 
 * Cell segmentation
-** synNotch system
-*** segmentation
-*** declumping
-*** cell-cell contact test
+** segmentation
+** declumping
+** cell-cell contact test
