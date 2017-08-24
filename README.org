@@ -1,0 +1,11 @@
+* TASBE-like characterization of the microscope
+** autofluorescence
+** bleedthrough
+** MEFLs calibration
+** optical bias
+
+* Cell segmentation
+** synNotch system
+*** segmentation
+*** declumping
+*** cell-cell contact test
