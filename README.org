@@ -1,4 +1,8 @@
 * dependencies
+  + matplotlib
+  + numpy
+  + scipy
+  + scikit-image
 * features
 ** TASBE-like characterization of the microscope
 *** autofluorescence
