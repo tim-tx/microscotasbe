@@ -63,7 +63,9 @@ for i,fromchan in enumerate(bins.keys()):
 # the plots
         
 for i,fromchan in enumerate(bins.keys()):
-    for j,tochan in enumerate(set(bins[fromchan].keys()) - set(fromchan)):
+    otherchans = list(bins[fromchan].keys())
+    otherchans.remove(fromchan)
+    for j,tochan in enumerate(otherchans):
         ax = fig.add_axes([0.1+j*0.4,0.7-i*0.3,0.3,0.25])
         bldthru = (intensities[fromchan][fromchan],intensities[fromchan][tochan])
         label_list = (labels[fromchan],labels[tochan])
