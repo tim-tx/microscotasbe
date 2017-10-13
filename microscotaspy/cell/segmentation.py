@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 import scipy.ndimage as ndi
 import skimage.filters as skfi
 import skimage.measure as skmeas
@@ -26,3 +27,12 @@ def intensity(im,mask):
         cell_mask = np.where(mask == l)
         intensities.append(np.mean(im[np.where(mask == l)]))
     return np.array(intensities)
+
+def get_events(im,layers=(),labels=('default',)):
+    assert(len(labels) == len(layers)+1)
+    seg = segment(im)
+    features = declump(im,seg)
+    df = pd.DataFrame({labels[0]: intensity(im,features)})
+    for i,layer in enumerate(layers):
+        df[labels[i+1]] = pd.Series(intensity(layer,features))
+    return df
