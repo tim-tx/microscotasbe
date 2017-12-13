@@ -2,8 +2,6 @@
 # plots. It's fairly slow, I think the bottleneck is in
 # microscotaspy.cell.intensity().
 
-import sys
-sys.path.insert(0, '../..')        # hack until I do packaging
 import microscotaspy.cell as mtcell
 import microscotaspy.calibrate as mtcalib
 

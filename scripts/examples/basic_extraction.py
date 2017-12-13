@@ -1,5 +1,3 @@
-import sys
-sys.path.insert(0, '../..')        # hack until I do packaging
 import microscotaspy.cell as mtcell
 import skimage.io as skio
 
