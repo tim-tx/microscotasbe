@@ -14,3 +14,9 @@
 *** segmentation
 *** declumping
 *** cell-cell contact test
+* installation
+  + clone the repository, navigate to destination
+  + run
+    #+BEGIN_SRC
+    pip install -e .
+    #+END_SRC
