@@ -8,4 +8,4 @@ r = skio.imread(path + 'B5_02_3_6_Texas Red_001.tif')
 b = skio.imread(path + 'B5_02_4_6_TagBFP_001.tif')
 
 # segment in green channel, compute intensities in red and blue with green mask
-df = mtcell.get_events(g,(r,b),['g','r','b'])
+df,_,_ = mtcell.get_events(g,(g,r,b),['g','r','b'])
