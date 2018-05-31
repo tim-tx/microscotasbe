@@ -7,7 +7,7 @@ import skimage.filters as skfi
 import skimage.measure as skmeas
 import skimage.morphology as skmorph
 
-from ..cell import segment,declump
+from ..segmentation import segment,declump
 
 def bleedthrough_scatter(intensities,labels,ax=None):
     if ax is None:
