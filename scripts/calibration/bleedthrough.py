@@ -1,9 +1,9 @@
 # This file reads all the images and generates bleedthrough
 # plots. It's fairly slow, I think the bottleneck is in
-# microscotaspy.cell.intensity().
+# microtaspy.cell.intensity().
 
-import microscotaspy.cell as mtcell
-import microscotaspy.calibrate as mtcalib
+import microtaspy.cell as mtcell
+import microtaspy.calibrate as mtcalib
 
 import logging
 import skimage.io as skio

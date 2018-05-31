@@ -5,14 +5,14 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name = "microscotaspy",
+    name = "microtaspy",
     version = "0.0.1",
     author = "Timothy Jones",
     author_email = "tjones01@gmail.com",
     description = "A Python image processing pipeline for cells based on scikit-image",
     license = "GPLv3 with linking exception",
     keywords = "image-processing microscopy cytometry",
-    url = "https://github.com/tim-tx/microscotaspy",
+    url = "https://github.com/tim-tx/microtaspy",
     packages = find_packages(),
     install_requires = ["numpy>=1.13.3",
                         "scikit-image>=0.13.1",

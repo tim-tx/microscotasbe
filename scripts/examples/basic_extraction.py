@@ -1,4 +1,4 @@
-import microscotaspy.cell as mtcell
+import microtaspy.cell as mtcell
 import skimage.io as skio
 
 path = '/mnt/seaside/rsl/DataSetForTim/2D_Data/Kiwimagi12082017/CytationData/170811_112033_Plate 3/'

@@ -1,10 +1,12 @@
 import unittest
 import time
 import logging
-import microscotaspy.cell as mtcell
+import microtaspy.cell as mtcell
 import skimage.io as skio
 import numpy as np
 import pandas as pd
+
+logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
 class TestExtraction(unittest.TestCase):
 
