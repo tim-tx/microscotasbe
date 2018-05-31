@@ -1,20 +1,16 @@
-* dependencies
+* Features
+** instrument characterization
+*** optical bias
+
+** cell segmentation
+*** segmentation
+*** declumping
+* Dependencies
   + matplotlib
   + numpy
   + scipy
   + scikit-image
-* features
-** TASBE-like characterization of the microscope
-*** autofluorescence
-*** bleedthrough
-*** MEFLs calibration
-*** optical bias
-
-** Cell segmentation
-*** segmentation
-*** declumping
-*** cell-cell contact test
-* installation
+* Installation
   + clone the repository, navigate to destination
   + run
     #+BEGIN_SRC
