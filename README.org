@@ -11,6 +11,7 @@
   + [[http://www.numpy.org/][numpy]]
   + [[https://www.scipy.org/][scipy]]
   + [[http://scikit-image.org/][scikit-image]]
+  + [[https://pandas.pydata.org/][pandas]]
 * Installation
   #+BEGIN_SRC
     $ pip install -e .

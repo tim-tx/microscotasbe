@@ -17,6 +17,7 @@ setup(
     install_requires = ["numpy>=1.13.3",
                         "scikit-image>=0.13.1",
                         "matplotlib>=2.1.1",
+                        "pandas>=0.21.1",
                         "scipy>=1.0.0"],
     long_description = read('README.org'),
     classifiers = [
