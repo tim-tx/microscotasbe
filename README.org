@@ -1,18 +1,17 @@
 * Features
-** instrument characterization
-*** optical bias
-
-** cell segmentation
-*** segmentation
-*** declumping
+** Instrument calibration
+*** Optical bias
+** Image processing
+*** Segmentation
+*** Declumping
 * Dependencies
-  + matplotlib
-  + numpy
-  + scipy
-  + scikit-image
+  + [[https://matplotlib.org/][matplotlib]]
+  + [[http://www.numpy.org/][numpy]]
+  + [[https://www.scipy.org/][scipy]]
+  + [[http://scikit-image.org/][scikit-image]]
 * Installation
-  + clone the repository, navigate to destination
-  + run
-    #+BEGIN_SRC
-    pip install -e .
-    #+END_SRC
+  #+BEGIN_SRC
+    $ pip install -e .
+  #+END_SRC
+* Usage
+  See the example script in =scripts/examples/basic_extraction.py=.
