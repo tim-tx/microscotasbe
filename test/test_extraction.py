@@ -5,6 +5,7 @@ import microtaspy.segmentation as mseg
 import skimage.io as skio
 import numpy as np
 import pandas as pd
+from glob import glob
 
 logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
@@ -41,13 +42,21 @@ class TestExtraction(unittest.TestCase):
         logging.debug("Intensity measurement took %.3f seconds." % (t1-t0))
 
     def test_get_events(self):
-        path = '/mnt/seaside/rsl/DataSetForTim/2D_Data/Kiwimagi12082017/CytationData/170811_112033_Plate 3/'
+        import matplotlib.pyplot as plt
+        path = 'data/'
+        data = {}
+        for chan in ['green','red','blue']:
+            data[chan] = skio.imread_collection(sorted(glob(path + '%s_*.tif' % chan)))
 
-        g = skio.imread(path + 'B5_02_2_6_GFP_001.tif')
-        r = skio.imread(path + 'B5_02_3_6_Texas Red_001.tif')
-        b = skio.imread(path + 'B5_02_4_6_TagBFP_001.tif')
-
-        df = mseg.get_events(g,(g,r,b),['g','r','b'])
+        df = {}
+        for chan in ['green','red','blue']:
+            df[chan] = pd.DataFrame()
+            for i in range(len(data[chan])):
+                frame,seg,_ = mseg.get_events(data[chan][i],(data['green'][i],data['red'][i],data['blue'][i]),['g','r','b'])
+                df[chan] = df[chan].append(frame)
+            df[chan] = df[chan].reset_index(drop=True)
+            # plt.imsave(chan + ".png",seg)
+        # print(df)
 
 if __name__ == '__main__':
     unittest.main()
