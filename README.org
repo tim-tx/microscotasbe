@@ -1,3 +1,5 @@
+[[https://travis-ci.com/tim-tx/microtaspy][https://travis-ci.com/tim-tx/microtaspy.svg?branch=develop]]
+
 * Features
 ** Instrument calibration
 *** Optical bias
