@@ -13,8 +13,25 @@
   + [[http://scikit-image.org/][scikit-image]]
   + [[https://pandas.pydata.org/][pandas]]
 * Installation
-  #+BEGIN_SRC
-    $ pip install -e .
-  #+END_SRC
+** =pip=
+   #+BEGIN_SRC
+     $ pip install -e .
+   #+END_SRC
+** =pipenv=
+   #+BEGIN_SRC
+     $ pipenv install -e .
+     $ pipenv shell
+     $ python
+     >>> import microtaspy
+     ...
+   #+END_SRC
+   If you want to use this module in a jupyter notebook, after =pipenv install -e .=, do the following:
+   #+BEGIN_SRC
+     $ pipenv install ipykernel
+     $ pipenv shell
+     $ python -m ipykernel install --user --name=my-virtualenv-name
+     $ jupyter notebook
+   #+END_SRC
+   Then open a notebook and change to the specified kernel (=my-virtualenv-name=).
 * Usage
   See the example script in =scripts/examples/basic_extraction.py=.
